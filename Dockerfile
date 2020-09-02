@@ -1,5 +1,5 @@
-FROM docker.io/library/httpd:latest
+FROM docker.io/centos/httpd
 
-ADD index.html /usr/local/apache2/htdocs
-WORKDIR /usr/local/apache2
-ENTRYPOINT ["/usr/local/bin/httpd-foreground" ]
+ADD index.html /var/www/html/
+ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+EXPOSE 8080
