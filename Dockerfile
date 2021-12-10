@@ -1,4 +1,4 @@
-FROM registry.ocp.lab:5000/images/centos
+FROM docker.io/library/centos
 
 RUN yum install -y httpd
 ADD index.html /var/www/html
