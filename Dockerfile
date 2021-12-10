@@ -1,4 +1,3 @@
-#FROM docker.io/library/centos
 FROM registry.ocp.lab:5000/images/centos
 
 RUN yum install -y httpd
