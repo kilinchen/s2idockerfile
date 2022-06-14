@@ -1,6 +1,5 @@
-FROM docker.io/library/centos
+FROM docker.io/library/httpd
 
-RUN yum install -y httpd
 ADD index.html /var/www/html
 EXPOSE 80
 ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
