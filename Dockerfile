@@ -1,4 +1,4 @@
-FROM docker.io/library/httpd
+FROM registry.ocp.taipei.com:8443/myimage/httpd
 
 ADD index.html /var/www/html
 EXPOSE 80
